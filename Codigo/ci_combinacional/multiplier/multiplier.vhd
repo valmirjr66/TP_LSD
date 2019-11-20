@@ -2,7 +2,7 @@ LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE IEEE.numeric_std.ALL;
 
-ENTITY multiplicador IS
+ENTITY multiplier IS
 	GENERIC (
 		SHORT_SIZE : INTEGER := 16;
 		LONG_SIZE : INTEGER := 32
@@ -11,11 +11,11 @@ ENTITY multiplicador IS
 	PORT (
 		a : IN std_logic_vector(SHORT_SIZE - 1 DOWNTO 0);
 		b : IN std_logic_vector(SHORT_SIZE - 1 DOWNTO 0);
-		s : OUT std_logic_vector(7 DOWNTO 0)
+		s : OUT std_logic_vector(LONG_SIZE - 1 DOWNTO 0)
 	);
-END multiplicador;
+END multiplier;
 
-ARCHITECTURE RTL OF func IS
+ARCHITECTURE RTL OF multiplier IS
 	COMPONENT full_adder_32_bits IS
 		PORT (
 			Cin : IN std_logic;
@@ -27,6 +27,7 @@ ARCHITECTURE RTL OF func IS
 	END COMPONENT;
 
 	SIGNAL b_long_size : std_logic_vector(LONG_SIZE - 1 DOWNTO 0);
+	SIGNAL proto_b_long_size : std_logic_vector(LONG_SIZE DOWNTO 0);
 	SIGNAL result : std_logic_vector(LONG_SIZE - 1 DOWNTO 0);
 BEGIN
 	PROCESS (a, b)
@@ -35,7 +36,7 @@ BEGIN
 		b_long_size <= (b'high DOWNTO 0 => b, OTHERS => '0');
 		proto_b_long_size <= (b'high DOWNTO 0 => b, OTHERS => '0');
 
-		FOR I IN 0 TO SHORT_SIZE - 1 LOOP
+		FOR I IN 0 TO SHORT_SIZE - 1 GENERATE
 			proto_b_long_size <= b_long_size & '0';
 			b_long_size <= proto_b_long_size(LONG_SIZE - 1 DOWNTO 0);
 

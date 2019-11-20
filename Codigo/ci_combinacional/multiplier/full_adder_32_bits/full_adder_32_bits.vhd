@@ -3,7 +3,7 @@ USE IEEE.std_logic_1164.ALL;
 
 ENTITY full_adder_32_bits IS
 	GENERIC (
-		LONG_SIZE : INTEGER := 16;
+		LONG_SIZE : INTEGER := 32
 	);
 
 	PORT (
