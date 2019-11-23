@@ -11,19 +11,19 @@ ARCHITECTURE teste OF tb_registrador_16_bits IS
 	COMPONENT registrador_16_bits IS
 		PORT (
 			D_IN : IN std_logic_vector(DEFAULT_SIZE - 1 DOWNTO 0);
-			Q_OUT : IN std_logic_vector(DEFAULT_SIZE - 1 DOWNTO 0);
-			clock : IN std_logic;
+			Q_OUT : OUT std_logic_vector(DEFAULT_SIZE - 1 DOWNTO 0);
+			clk : IN std_logic;
 			R : IN std_logic
 		);
 	END COMPONENT;
 
 	SIGNAL D_IN, Q_OUT : std_logic_vector(DEFAULT_SIZE - 1 DOWNTO 0);
-	SIGNAL clock, r : std_logic := '0';
+	SIGNAL clk, r : std_logic := '0';
 BEGIN
-	instancia_registrador_16_bits : registrador_16_bits PORT MAP(D_IN => D_IN, Q_OUT => Q_OUT, R => r, clock => clock);
+	instancia_registrador_16_bits : registrador_16_bits PORT MAP(D_IN => D_IN, Q_OUT => Q_OUT, R => r, clk => clk);
 	clock_process : PROCESS
 	BEGIN
-		clock <= NOT(clock);
+		clk <= NOT(clk);
 		WAIT FOR 3 ns;
 	END PROCESS;
 
