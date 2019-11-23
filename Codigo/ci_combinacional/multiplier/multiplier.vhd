@@ -9,18 +9,18 @@ ENTITY multiplier IS
 	);
 
 	PORT (
-		a : IN unsigned(SHORT_SIZE - 1 DOWNTO 0);
-		b : IN unsigned(SHORT_SIZE - 1 DOWNTO 0);
-		s : OUT unsigned(LONG_SIZE - 1 DOWNTO 0)
+		a : IN std_logic_vector(SHORT_SIZE - 1 DOWNTO 0);
+		b : IN std_logic_vector(SHORT_SIZE - 1 DOWNTO 0);
+		s : OUT std_logic_vector(LONG_SIZE - 1 DOWNTO 0)
 	);
 END multiplier;
 
 ARCHITECTURE RTL OF multiplier IS
-	SIGNAL result : unsigned(LONG_SIZE - 1 DOWNTO 0);
+	SIGNAL result : std_logic_vector(LONG_SIZE - 1 DOWNTO 0);
 BEGIN
 	PROCESS (a, b)
 	BEGIN
-		result <= a * b;
+		result <= std_logic_vector(unsigned(a) * unsigned(b));
 	END PROCESS;
 	s <= result;
 END RTL;
