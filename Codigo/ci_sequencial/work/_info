@@ -15,7 +15,7 @@ L4
 VJGI[Cn:HVRcS7nEK_OEF43
 Z7 OV;C;10.1b;51
 31
-Z8 !s108 1574525702.666000
+Z8 !s108 1574528735.475000
 Z9 !s90 -reportprogress|300|-explicit|-93|flip_flop_d.vhd|
 Z10 !s107 flip_flop_d.vhd|
 Z11 o-explicit -93 -O0
@@ -39,7 +39,7 @@ R12
 !s100 2MhdMIfAJldXAH[FKmgH10
 !i10b 1
 Eregistrador_16_bits
-Z13 w1574525696
+Z13 w1574528582
 R2
 R3
 R4
@@ -47,23 +47,23 @@ Z14 8registrador_16_bits.vhd
 Z15 Fregistrador_16_bits.vhd
 l0
 L4
-V0_;_01E1M71E6>RKh9VR<3
+V@?SMH5=S^Y22MWPU7bSK32
 R7
 31
-Z16 !s108 1574525702.088000
+Z16 !s108 1574528735.039000
 Z17 !s90 -reportprogress|300|-explicit|-93|registrador_16_bits.vhd|
 Z18 !s107 registrador_16_bits.vhd|
 R11
 R12
-!s100 i>zH]7ee:B852oZRUGmoC1
+!s100 O01>5[I67aZWFzk1dhgLR1
 !i10b 1
 Artl
 R2
 R3
-DEx4 work 19 registrador_16_bits 0 22 0_;_01E1M71E6>RKh9VR<3
+DEx4 work 19 registrador_16_bits 0 22 @?SMH5=S^Y22MWPU7bSK32
 l26
 L17
-VZb1c9C_m;iV4B7ST8JkIh2
+V:eUBkihLmOIKD1^dMXTj]3
 R7
 31
 R16
@@ -71,10 +71,10 @@ R17
 R18
 R11
 R12
-!s100 ^@^551Ho[HgSI2[kR<]zD3
+!s100 GWlm;P@zzi?M]Fd^^MCXO1
 !i10b 1
 Etb_registrador_16_bits
-Z19 w1574523725
+Z19 w1574528727
 R2
 R3
 R4
@@ -87,7 +87,7 @@ VB7JNWiCl9:LNTjH25`c^I2
 R7
 31
 !i10b 1
-Z22 !s108 1574525702.994000
+Z22 !s108 1574528735.993000
 Z23 !s90 -reportprogress|300|-explicit|-93|tb_registrador_16_bits.vhd|
 Z24 !s107 tb_registrador_16_bits.vhd|
 R11
@@ -98,8 +98,8 @@ R3
 DEx4 work 22 tb_registrador_16_bits 0 22 B7JNWiCl9:LNTjH25`c^I2
 l22
 L10
-VbNV=[FSeGOC1LfVMZgmcI1
-!s100 Y][IO:9oXma=Ae0N]dO?]1
+VIm@5O^>3K==`?C^aoMF;O3
+!s100 <K8f<WKg1mSWi<[2_6HH51
 R7
 31
 !i10b 1
