@@ -24,99 +24,12 @@ ARCHITECTURE RTL OF registrador_16_bits IS
 		);
 	END COMPONENT;
 BEGIN
-	reg1 : COMPONENT flip_flop_d PORT MAP(
-		clock => clk,
-		Reset => R,
-		D => D_IN(0),
-		Q => Q_OUT(0));
-
-	reg2 : COMPONENT flip_flop_d PORT MAP(
-		clock => clk,
-		Reset => R,
-		D => D_IN(1),
-		Q => Q_OUT(1));
-
-	reg3 : COMPONENT flip_flop_d PORT MAP(
-		clock => clk,
-		Reset => R,
-		D => D_IN(2),
-		Q => Q_OUT(2));
-
-	reg4 : COMPONENT flip_flop_d PORT MAP(
-		clock => clk,
-		Reset => R,
-		D => D_IN(3),
-		Q => Q_OUT(3));
-
-	reg5 : COMPONENT flip_flop_d PORT MAP(
-		clock => clk,
-		Reset => R,
-		D => D_IN(4),
-		Q => Q_OUT(4));
-
-	reg6 : COMPONENT flip_flop_d PORT MAP(
-		clock => clk,
-		Reset => R,
-		D => D_IN(5),
-		Q => Q_OUT(5));
-
-	reg7 : COMPONENT flip_flop_d PORT MAP(
-		clock => clk,
-		Reset => R,
-		D => D_IN(6),
-		Q => Q_OUT(6));
-
-	reg8 : COMPONENT flip_flop_d PORT MAP(
-		clock => clk,
-		Reset => R,
-		D => D_IN(7),
-		Q => Q_OUT(7));
-
-	reg9 : COMPONENT flip_flop_d PORT MAP(
-		clock => clk,
-		Reset => R,
-		D => D_IN(8),
-		Q => Q_OUT(8));
-
-	reg10 : COMPONENT flip_flop_d PORT MAP(
-		clock => clk,
-		Reset => R,
-		D => D_IN(9),
-		Q => Q_OUT(9));
-
-	reg11 : COMPONENT flip_flop_d PORT MAP(
-		clock => clk,
-		Reset => R,
-		D => D_IN(10),
-		Q => Q_OUT(10));
-
-	reg12 : COMPONENT flip_flop_d PORT MAP(
-		clock => clk,
-		Reset => R,
-		D => D_IN(11),
-		Q => Q_OUT(11));
-
-	reg13 : COMPONENT flip_flop_d PORT MAP(
-		clock => clk,
-		Reset => R,
-		D => D_IN(13),
-		Q => Q_OUT(13));
-
-	reg14 : COMPONENT flip_flop_d PORT MAP(
-		clock => clk,
-		Reset => R,
-		D => D_IN(13),
-		Q => Q_OUT(13));
-
-	reg15 : COMPONENT flip_flop_d PORT MAP(
-		clock => clk,
-		Reset => R,
-		D => D_IN(14),
-		Q => Q_OUT(14));
-
-	reg16 : COMPONENT flip_flop_d PORT MAP(
-		clock => clk,
-		Reset => R,
-		D => D_IN(15),
-		Q => Q_OUT(15));
+	REGISTRADOR : FOR i IN 0 TO 15 GENERATE
+	BEGIN
+		dff : flip_flop_d PORT MAP(
+			clock => clk,
+			D => D_IN(i),
+			Reset => R,
+			Q => Q_OUT(i));
+	END GENERATE REGISTRADOR;
 END RTL;
