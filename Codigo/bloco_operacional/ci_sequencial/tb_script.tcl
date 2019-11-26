@@ -3,11 +3,12 @@ vdel -lib work -all
 }
 
 vlib work
-vcom -explicit  -93 "registrador_16_bits.vhd"
-vcom -explicit  -93 "flip_flop_d.vhd"
-vcom -explicit  -93 "tb_registrador_16_bits.vhd"
-vsim -t 1ns   -lib work tb_registrador_16_bits
-add wave sim:/tb_registrador_16_bits/*
+vcom -explicit  -93 "shifter.vhd"
+vcom -explicit  -93 "../shared/registrador_16_bits/registrador_16_bits.vhd"
+vcom -explicit  -93 "../shared/registrador_16_bits/flip_flop_d.vhd"
+vcom -explicit  -93 "tb_shifter.vhd"
+vsim -t 1ns   -lib work tb_shifter
+add wave sim:/tb_shifter/*
 #do {wave.do}
 
 view wave
