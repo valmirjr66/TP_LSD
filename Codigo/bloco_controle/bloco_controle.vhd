@@ -6,14 +6,14 @@ ENTITY bloco_controle IS
 		CLOCK : IN std_logic;
 		RESET : IN std_logic;
 		R, S, M, Da, Db, La, Lb : IN std_logic;
-		s1, s2, s3, s4 : OUT std_logic
+		s1, s2, s3, s4 : OUT std_logic;
 		load, clear, shift, load_mult : OUT std_logic
 	);
 END bloco_controle;
 
 ARCHITECTURE arch OF bloco_controle IS
 	SIGNAL R_AUX, S_AUX, M_AUX, Da_AUX, Db_AUX, La_AUX, Lb_AUX : std_logic := '0';
-	TYPE state_type IS (E0, E1, E2, E3, E4, E5, E6, E7, E8, E9, E10, E11, E12);
+	TYPE state_type IS (E0, E1, E2, E3, E4, E5, E6, E7, E8, E9, E10, E11);
 	SIGNAL A_S : state_type := E0;
 	SIGNAL N_S : state_type;
 	SIGNAL ALGUM_BOTAO : std_logic := '0';
@@ -78,19 +78,23 @@ BEGIN
 			WHEN E7 =>
 				N_S <= E6;
 			WHEN E8 =>
-				IF ((R AND(La OR Lb)) OR (La AND Lb) OR NOT(R OR La OR Lb)) THEN
-					N_S <= E8;
-				ELSE
+				IF ((R AND NOT(La OR Lb)) = '1') THEN
 					N_S <= E0;
+				ELSIF ((La AND NOT(R OR Lb)) = '1') THEN
+					N_S <= E10;
+				ELSIF ((Lb AND NOT(R OR La)) = '1') THEN
+					N_S <= E11;
+				ELSE
+					N_S <= E8;
 				END IF;
 			WHEN E9 =>
-				IF (S AND NOT(M OR Da OR Db)) THEN
+				IF ((S AND NOT(M OR Da OR Db)) = '1') THEN
 					N_S <= E1;
-				ELSIF (M AND NOT(S OR Da OR Db)) THEN
+				ELSIF ((M AND NOT(S OR Da OR Db)) = '1') THEN
 					N_S <= E2;
-				ELSIF (Da AND NOT(M OR S OR Db)) THEN
+				ELSIF ((Da AND NOT(M OR S OR Db)) = '1') THEN
 					N_S <= E3;
-				ELSIF (Db AND NOT(M OR S OR Da)) THEN
+				ELSIF ((Db AND NOT(M OR S OR Da)) = '1') THEN
 					N_S <= E4;
 				ELSE
 					N_S <= E9;
@@ -118,8 +122,8 @@ BEGIN
 			WHEN E1 =>
 				s1 <= '1';
 				s2 <= '1';
-				s3 <= s3;
-				s4 <= s4;
+				--s3 <= s3;
+				--s4 <= s4;
 				clear <= '0';
 				shift <= '0';
 				load <= '0';
@@ -127,8 +131,8 @@ BEGIN
 			WHEN E2 =>
 				s1 <= '1';
 				s2 <= '0';
-				s3 <= s3;
-				s4 <= s4;
+				--s3 <= s3;
+				--s4 <= s4;
 				clear <= '0';
 				shift <= '0';
 				load <= '0';
@@ -136,8 +140,8 @@ BEGIN
 			WHEN E3 =>
 				s1 <= '0';
 				s2 <= '1';
-				s3 <= s3;
-				s4 <= s4;
+				--s3 <= s3;
+				--s4 <= s4;
 				clear <= '0';
 				shift <= '0';
 				load <= '0';
@@ -145,35 +149,35 @@ BEGIN
 			WHEN E4 =>
 				s1 <= '0';
 				s2 <= '0';
-				s3 <= s3;
-				s4 <= s4;
+				--s3 <= s3;
+				--s4 <= s4;
 				clear <= '0';
 				shift <= '0';
 				load <= '0';
 				load_mult <= '0';
 			WHEN E5 =>
-				s1 <= s1;
-				s2 <= s2;
-				s3 <= s3;
-				s4 <= s4;
+				--s1 <= s1;
+				--s2 <= s2;
+				--s3 <= s3;
+				--s4 <= s4;
 				clear <= '0';
 				shift <= '0';
 				load <= '1';
 				load_mult <= '0';
 			WHEN E6 =>
-				s1 <= s1;
-				s2 <= s2;
-				s3 <= s3;
-				s4 <= s4;
+				--s1 <= s1;
+				--s2 <= s2;
+				--s3 <= s3;
+				--s4 <= s4;
 				clear <= '0';
 				load <= '0';
 				load_mult <= '0';
 				shift <= '1';
 			WHEN E7 =>
-				s1 <= s1;
-				s2 <= s2;
-				s3 <= s3;
-				s4 <= s4;
+				--s1 <= s1;
+				--s2 <= s2;
+				----s3 <= s3;
+				--s4 <= s4;
 				clear <= '0';
 				load <= '0';
 				shift <= '0';
@@ -181,8 +185,8 @@ BEGIN
 			WHEN E8 =>
 				s1 <= '0';
 				s2 <= '0';
-				s3 <= s3;
-				s4 <= s4;
+				--s3 <= s3;
+				--s4 <= s4;
 				clear <= '0';
 				shift <= '0';
 				load <= '0';
@@ -190,8 +194,8 @@ BEGIN
 			WHEN E9 =>
 				s1 <= '0';
 				s2 <= '0';
-				s3 <= s3;
-				s4 <= s4;
+				--s3 <= s3;
+				--s4 <= s4;
 				clear <= '0';
 				shift <= '0';
 				load <= '0';
