@@ -15,7 +15,7 @@ L4
 V<GUIU?RILRHG]:V_P5_b33
 Z7 OV;C;10.1b;51
 31
-Z8 !s108 1574741074.350000
+Z8 !s108 1574743103.468000
 Z9 !s90 -reportprogress|300|-explicit|-93|../shared/registrador_16_bits/flip_flop_d.vhd|
 Z10 !s107 ../shared/registrador_16_bits/flip_flop_d.vhd|
 Z11 o-explicit -93 -O0
@@ -50,7 +50,7 @@ L4
 V@?SMH5=S^Y22MWPU7bSK32
 R7
 31
-Z15 !s108 1574741073.903000
+Z15 !s108 1574743103.064000
 Z16 !s90 -reportprogress|300|-explicit|-93|../shared/registrador_16_bits/registrador_16_bits.vhd|
 Z17 !s107 ../shared/registrador_16_bits/registrador_16_bits.vhd|
 R11
@@ -74,7 +74,7 @@ R12
 !s100 C_@9e1XLbU6D=:ZkLm9J_2
 !i10b 1
 Eshifter
-Z18 w1574741045
+Z18 w1574743098
 R2
 R3
 R4
@@ -85,7 +85,7 @@ L4
 V=ZHO@M=UGX>WWiECbXj4z2
 R7
 31
-Z21 !s108 1574741073.494000
+Z21 !s108 1574743102.577000
 Z22 !s90 -reportprogress|300|-explicit|-93|shifter.vhd|
 Z23 !s107 shifter.vhd|
 R11
@@ -96,9 +96,9 @@ Artl
 R2
 R3
 DEx4 work 7 shifter 0 22 =ZHO@M=UGX>WWiECbXj4z2
-l32
+l33
 L19
-VHBi2XajLkS_@elc^6MX6I3
+VL2]hRY:MDBKFfjba=hl333
 R7
 31
 R21
@@ -106,7 +106,7 @@ R22
 R23
 R11
 R12
-!s100 JcP>HPiU_LGkFm1foMcUD3
+!s100 4`XRXFDSC^inh0^<_?flb0
 !i10b 1
 Etb_shifter
 Z24 w1574741072
@@ -122,7 +122,7 @@ VS5KCb::YBjo_a7V`e<loJ2
 R7
 31
 !i10b 1
-Z27 !s108 1574741074.989000
+Z27 !s108 1574743103.880000
 Z28 !s90 -reportprogress|300|-explicit|-93|tb_shifter.vhd|
 Z29 !s107 tb_shifter.vhd|
 R11
