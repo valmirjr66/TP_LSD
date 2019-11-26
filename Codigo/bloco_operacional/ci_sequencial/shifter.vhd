@@ -25,34 +25,34 @@ ARCHITECTURE RTL OF shifter IS
 			R : IN std_logic
 		);
 	END COMPONENT;
-BEGIN
+
 	SIGNAL register_output : std_logic_vector(DEFAULT_SIZE - 1 DOWNTO 0);
 	SIGNAL carregamento_inicial : std_logic := '0';
 	SIGNAL proto_output : std_logic_vector(DEFAULT_SIZE - 1 DOWNTO 0);
-
+BEGIN
 	register_component : registrador_16_bits PORT MAP(
 		D_IN => A_IN,
 		Q_OUT => register_output,
 		clk => load_div,
 		R => reset);
 
-	PROCESS (R)
+	PROCESS (reset)
 	BEGIN
-		IF (R = '1') THEN
-			carregamento_inicial = '0';
+		IF (reset = '1') THEN
+			carregamento_inicial <= '0';
 		END IF;
 	END PROCESS;
 
 	PROCESS (register_output, carregamento_inicial)
 	BEGIN
-		IF (NOT(carregamento_inicial)) THEN
+		IF (NOT(carregamento_inicial) = '1') THEN
 			proto_output <= register_output;
 		END IF;
 	END PROCESS;
 
 	PROCESS (load_div)
 	BEGIN
-		IF (load_div) THEN
+		IF (load_div = '1') THEN
 			carregamento_inicial <= '1';
 		END IF;
 	END PROCESS;

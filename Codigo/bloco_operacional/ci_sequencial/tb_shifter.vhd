@@ -8,7 +8,7 @@ ENTITY tb_shifter IS
 END tb_shifter;
 
 ARCHITECTURE teste OF tb_shifter IS
-	COMPONENT registrador_16_bits IS
+	COMPONENT shifter IS
 		PORT (
 			A_IN : IN std_logic_vector(DEFAULT_SIZE - 1 DOWNTO 0);
 			B_OUT : OUT std_logic_vector(DEFAULT_SIZE - 1 DOWNTO 0);

@@ -1,0 +1,145 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Valmir Júnior\Documents\TP_LSD\Codigo\bloco_operacional\ci_sequencial
+Eflip_flop_d
+Z1 w1574725410
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dC:\Users\Valmir Júnior\Documents\TP_LSD\Codigo\bloco_operacional\ci_sequencial
+Z5 8../shared/registrador_16_bits/flip_flop_d.vhd
+Z6 F../shared/registrador_16_bits/flip_flop_d.vhd
+l0
+L4
+V<GUIU?RILRHG]:V_P5_b33
+Z7 OV;C;10.1b;51
+31
+Z8 !s108 1574741074.350000
+Z9 !s90 -reportprogress|300|-explicit|-93|../shared/registrador_16_bits/flip_flop_d.vhd|
+Z10 !s107 ../shared/registrador_16_bits/flip_flop_d.vhd|
+Z11 o-explicit -93 -O0
+Z12 tExplicit 1
+!s100 n;bW4VF`a<jB7]Cm9iZ0d1
+!i10b 1
+Artl
+R2
+R3
+DEx4 work 11 flip_flop_d 0 22 <GUIU?RILRHG]:V_P5_b33
+l18
+L13
+VZke4VFmo>heCH1^1m9_530
+R7
+31
+R8
+R9
+R10
+R11
+R12
+!s100 2f5ZS<>eJJUk2W;J`ZDV:2
+!i10b 1
+Eregistrador_16_bits
+R1
+R2
+R3
+R4
+Z13 8../shared/registrador_16_bits/registrador_16_bits.vhd
+Z14 F../shared/registrador_16_bits/registrador_16_bits.vhd
+l0
+L4
+V@?SMH5=S^Y22MWPU7bSK32
+R7
+31
+Z15 !s108 1574741073.903000
+Z16 !s90 -reportprogress|300|-explicit|-93|../shared/registrador_16_bits/registrador_16_bits.vhd|
+Z17 !s107 ../shared/registrador_16_bits/registrador_16_bits.vhd|
+R11
+R12
+!s100 O01>5[I67aZWFzk1dhgLR1
+!i10b 1
+Artl
+R2
+R3
+DEx4 work 19 registrador_16_bits 0 22 @?SMH5=S^Y22MWPU7bSK32
+l26
+L17
+VcYik14TdMa:VWHm>FCj9A1
+R7
+31
+R15
+R16
+R17
+R11
+R12
+!s100 C_@9e1XLbU6D=:ZkLm9J_2
+!i10b 1
+Eshifter
+Z18 w1574741045
+R2
+R3
+R4
+Z19 8shifter.vhd
+Z20 Fshifter.vhd
+l0
+L4
+V=ZHO@M=UGX>WWiECbXj4z2
+R7
+31
+Z21 !s108 1574741073.494000
+Z22 !s90 -reportprogress|300|-explicit|-93|shifter.vhd|
+Z23 !s107 shifter.vhd|
+R11
+R12
+!s100 `_jX;]K?hBMoG9YKo;<im1
+!i10b 1
+Artl
+R2
+R3
+DEx4 work 7 shifter 0 22 =ZHO@M=UGX>WWiECbXj4z2
+l32
+L19
+VHBi2XajLkS_@elc^6MX6I3
+R7
+31
+R21
+R22
+R23
+R11
+R12
+!s100 JcP>HPiU_LGkFm1foMcUD3
+!i10b 1
+Etb_shifter
+Z24 w1574741072
+R2
+R3
+R4
+Z25 8tb_shifter.vhd
+Z26 Ftb_shifter.vhd
+l0
+L4
+VS5KCb::YBjo_a7V`e<loJ2
+!s100 `c_8K6:j:o<jJORdgnS1:1
+R7
+31
+!i10b 1
+Z27 !s108 1574741074.989000
+Z28 !s90 -reportprogress|300|-explicit|-93|tb_shifter.vhd|
+Z29 !s107 tb_shifter.vhd|
+R11
+R12
+Ateste
+R2
+R3
+DEx4 work 10 tb_shifter 0 22 S5KCb::YBjo_a7V`e<loJ2
+l24
+L10
+Vd[T[C:^g2LjHTWCENNg]c1
+!s100 g7Hk4kedY5S@:l>0Wkge62
+R7
+31
+!i10b 1
+R27
+R28
+R29
+R11
+R12
