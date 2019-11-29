@@ -12,7 +12,7 @@ vcom -explicit  -93 "ci_sequencial/ci_sequencial.vhd"
 vcom -explicit  -93 "ci_sequencial/shifter/shifter.vhd"
 vcom -explicit  -93 "ci_combinacional/ci_combinacional.vhd"
 vcom -explicit  -93 "ci_combinacional/ppa/ppa.vhd"
-vcom -explicit  -93 "ci_combinacional/ppa/full_adder.vhd"
+vcom -explicit  -93 "ci_combinacional/ppa/full_adder/full_adder.vhd"
 vcom -explicit  -93 "ci_combinacional/multiplier/multiplier.vhd"
 
 vcom -explicit  -93 "tb_bloco_operacional.vhd"

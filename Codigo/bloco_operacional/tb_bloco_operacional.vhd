@@ -21,11 +21,11 @@ ARCHITECTURE teste OF tb_bloco_operacional IS
 		);
 	END COMPONENT;
 
-	A, B, Y : std_logic_vector(DEFAULT_SIZE - 1 DOWNTO 0);
-	s1, s2, s3, s4 : std_logic := '0';
-	clock, reset : std_logic := '0';
-	load, clear, shift, load_mult : std_logic := '0';
-
+	SIGNAL A, B, Y : std_logic_vector(DEFAULT_SIZE - 1 DOWNTO 0);
+	SIGNAL s1, s2, s3, s4 : std_logic := '0';
+	SIGNAL clock, reset : std_logic := '0';
+	SIGNAL load, clear, shift, load_mult : std_logic := '0';
+BEGIN
 	instancia_bloco_operacional : bloco_operacional
 	PORT MAP(
 		A => A,
@@ -47,7 +47,14 @@ ARCHITECTURE teste OF tb_bloco_operacional IS
 	BEGIN
 		A <= "0000100110010110";
 		B <= "0010100011010001";
+		--s1 <= '1';
+		s2 <= '1';
 		WAIT FOR 20 ns;
+		load_mult <= '1';
+		WAIT FOR 20 ns;
+		shift <= '1';
+		WAIT FOR 20 ns;
+		load <= '1';
 	END PROCESS;
 
 	clock_process : PROCESS

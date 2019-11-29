@@ -21,7 +21,7 @@ END bloco_operacional;
 ARCHITECTURE RTL OF bloco_operacional IS
 	COMPONENT mux_16_bits_1X2 IS
 		PORT (
-			control : IN std_logic := 0;
+			control : IN std_logic := '0';
 			A_IN : IN std_logic_vector(DEFAULT_SIZE - 1 DOWNTO 0);
 			B_IN : IN std_logic_vector(DEFAULT_SIZE - 1 DOWNTO 0);
 			S_OUT : OUT std_logic_vector(DEFAULT_SIZE - 1 DOWNTO 0)
@@ -30,8 +30,8 @@ ARCHITECTURE RTL OF bloco_operacional IS
 
 	COMPONENT mux_16_bits_2X4 IS
 		PORT (
-			control1 : IN std_logic := 0;
-			control2 : IN std_logic := 0;
+			control1 : IN std_logic := '0';
+			control2 : IN std_logic := '0';
 			A_IN : IN std_logic_vector(DEFAULT_SIZE - 1 DOWNTO 0);
 			B_IN : IN std_logic_vector(DEFAULT_SIZE - 1 DOWNTO 0);
 			C_IN : IN std_logic_vector(DEFAULT_SIZE - 1 DOWNTO 0);
@@ -75,19 +75,19 @@ ARCHITECTURE RTL OF bloco_operacional IS
 		);
 	END COMPONENT;
 
-	SIGNAL mux_to_a : std_logic_vector(DEFAULT_SIZE);
-	SIGNAL mux_to_a : std_logic_vector(DEFAULT_SIZE);
+	SIGNAL mux_to_a : std_logic_vector(DEFAULT_SIZE - 1 DOWNTO 0);
+	SIGNAL mux_to_b : std_logic_vector(DEFAULT_SIZE - 1 DOWNTO 0);
 
-	SIGNAL sum_cout : std_logic_vector(DEFAULT_SIZE);
-	SIGNAL sum_signal : std_logic_vector(DEFAULT_SIZE);
-	SIGNAL multiplication_signal : std_logic_vector(DEFAULT_SIZE);
+	SIGNAL sum_cout : std_logic;
+	SIGNAL sum_signal : std_logic_vector(DEFAULT_SIZE - 1 DOWNTO 0);
+	SIGNAL multiplication_signal : std_logic_vector(DEFAULT_SIZE - 1 DOWNTO 0);
 
-	SIGNAL shift_a_signal : std_logic_vector(DEFAULT_SIZE);
-	SIGNAL shift_b_signal : std_logic_vector(DEFAULT_SIZE);
+	SIGNAL shift_a_signal : std_logic_vector(DEFAULT_SIZE - 1 DOWNTO 0);
+	SIGNAL shift_b_signal : std_logic_vector(DEFAULT_SIZE - 1 DOWNTO 0);
 
-	SIGNAL main_mux_signal : std_logic_vector(DEFAULT_SIZE);
+	SIGNAL main_mux_signal : std_logic_vector(DEFAULT_SIZE - 1 DOWNTO 0);
 
-	SIGNAL main_output_signal : std_logic_vector(DEFAULT_SIZE);
+	SIGNAL main_output_signal : std_logic_vector(DEFAULT_SIZE - 1 DOWNTO 0);
 
 	SIGNAL ground : std_logic := '0';
 BEGIN

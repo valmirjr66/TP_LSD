@@ -7,7 +7,7 @@ ENTITY mux_16_bits_1X2 IS
 	);
 
 	PORT (
-		control : IN std_logic := 0;
+		control : IN std_logic := '0';
 		A_IN : IN std_logic_vector(DEFAULT_SIZE - 1 DOWNTO 0);
 		B_IN : IN std_logic_vector(DEFAULT_SIZE - 1 DOWNTO 0);
 		S_OUT : OUT std_logic_vector(DEFAULT_SIZE - 1 DOWNTO 0)
@@ -18,7 +18,7 @@ ARCHITECTURE RTL OF mux_16_bits_1X2 IS
 BEGIN
 	PROCESS (control, A_IN, B_IN)
 	BEGIN
-		IF (control)
+		IF (control = '1') THEN
 			S_OUT <= A_IN;
 		ELSE
 			S_OUT <= B_IN;
