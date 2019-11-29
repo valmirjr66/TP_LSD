@@ -4,22 +4,21 @@ USE IEEE.numeric_std.ALL;
 
 ENTITY tb_multiplier IS
 	GENERIC (
-		SHORT_SIZE : INTEGER := 16;
-		LONG_SIZE : INTEGER := 32
+		DEFAULT_SIZE : INTEGER := 16
 	);
 END tb_multiplier;
 
 ARCHITECTURE teste OF tb_multiplier IS
 	COMPONENT multiplier IS
 		PORT (
-			a : IN unsigned(SHORT_SIZE - 1 DOWNTO 0);
-			b : IN unsigned(SHORT_SIZE - 1 DOWNTO 0);
-			s : OUT unsigned(LONG_SIZE - 1 DOWNTO 0)
+			a : IN unsigned(DEFAULT_SIZE - 1 DOWNTO 0);
+			b : IN unsigned(DEFAULT_SIZE - 1 DOWNTO 0);
+			s : OUT unsigned(DEFAULT_SIZE - 1 DOWNTO 0)
 		);
 	END COMPONENT;
 
-	SIGNAL a, b : unsigned(SHORT_SIZE - 1 DOWNTO 0);
-	SIGNAL s : unsigned(LONG_SIZE - 1 DOWNTO 0);
+	SIGNAL a, b : unsigned(DEFAULT_SIZE - 1 DOWNTO 0);
+	SIGNAL s : unsigned(DEFAULT_SIZE - 1 DOWNTO 0);
 
 BEGIN
 	instancia_multiplier : multiplier PORT MAP(a => a, b => b, s => s);
