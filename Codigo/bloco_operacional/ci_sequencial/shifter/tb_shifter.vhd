@@ -38,7 +38,5 @@ BEGIN
 		load_div <= '0';
 		WAIT FOR 20 ns;
 		shift <= '1';
-		WAIT FOR 20 ns;
-		shift <= '0';
 	END PROCESS;
 END teste;
