@@ -47,8 +47,8 @@ BEGIN
 
 	entradas_process : PROCESS
 	BEGIN
-		a <= "0000011110000001";
-		b <= "1100010000100000";
+		A_IN <= "0000011110000001";
+		B_IN <= "1100010000100000";
 		WAIT FOR 20 ns;
 		load_div_a <= '1';
 		WAIT FOR 20 ns;
@@ -57,8 +57,8 @@ BEGIN
 		load_div_a <= '0';
 		load_div_b <= '0';
 		WAIT FOR 20 ns;
-		a <= "0001001001101000";
-		b <= "0010100011010001";
+		A_IN <= "0001001001101000";
+		B_IN <= "0010100011010001";
 		WAIT FOR 20 ns;
 		shift_a <= '1';
 		WAIT FOR 20 ns;
