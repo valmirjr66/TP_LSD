@@ -12,11 +12,9 @@ ENTITY bloco_controle IS
 END bloco_controle;
 
 ARCHITECTURE arch OF bloco_controle IS
-	SIGNAL R_AUX, S_AUX, M_AUX, Da_AUX, Db_AUX, La_AUX, Lb_AUX : std_logic := '0';
 	TYPE state_type IS (E0, E1, E2, E3, E4, E5, E6, E7, E8, E9, E10, E11);
 	SIGNAL A_S : state_type := E0;
 	SIGNAL N_S : state_type;
-	SIGNAL ALGUM_BOTAO : std_logic := '0';
 BEGIN
 	sync_proc : PROCESS (CLOCK, N_S, RESET, A_S)
 	BEGIN
@@ -29,35 +27,7 @@ BEGIN
 		END IF;
 	END PROCESS sync_proc;
 
-	aux_proc : PROCESS (R, S, M, Da, Db, La, Lb, CLOCK)
-	BEGIN
-		IF (CLOCK = '1' AND CLOCK'EVENT) THEN
-			R_AUX <= R;
-			S_AUX <= S;
-			M_AUX <= M;
-			Da_AUX <= Da;
-			Db_AUX <= Db;
-			La_AUX <= La;
-			Lb_AUX <= Lb;
-		END IF;
-	END PROCESS aux_proc;
-
-	algum_botao_proc : PROCESS (R, S, M, Da, Db, La, Lb, R_AUX, S_AUX, M_AUX, Da_AUX, Db_AUX, La_AUX, Lb_AUX)
-	BEGIN
-		IF (((NOT R_AUX AND R) XOR
-			(NOT S_AUX AND S) XOR
-			(NOT M_AUX AND M) XOR
-			(NOT Da_AUX AND Da) XOR
-			(NOT Db_AUX AND Db) XOR
-			(NOT La_AUX AND La) XOR
-			(NOT Lb_AUX AND Lb)) = '1') THEN
-			ALGUM_BOTAO <= '1';
-		ELSE
-			ALGUM_BOTAO <= '0';
-		END IF;
-	END PROCESS algum_botao_proc;
-
-	fsm_proc : PROCESS (R, S, M, Da, Db, La, Lb, R_AUX, S_AUX, M_AUX, Da_AUX, Db_AUX, La_AUX, Lb_AUX, ALGUM_BOTAO, A_S)
+	fsm_proc : PROCESS (R, S, M, Da, Db, La, Lb, A_S)
 	BEGIN
 		-- Bloco principal
 		CASE A_S IS
@@ -120,8 +90,8 @@ BEGIN
 				load <= '0';
 				load_mult <= '0';
 			WHEN E1 =>
-				s1 <= '1';
-				s2 <= '1';
+				s1 <= '0';
+				s2 <= '0';
 				--s3 <= s3;
 				--s4 <= s4;
 				clear <= '0';
@@ -129,15 +99,6 @@ BEGIN
 				load <= '0';
 				load_mult <= '0';
 			WHEN E2 =>
-				s1 <= '1';
-				s2 <= '0';
-				--s3 <= s3;
-				--s4 <= s4;
-				clear <= '0';
-				shift <= '0';
-				load <= '0';
-				load_mult <= '0';
-			WHEN E3 =>
 				s1 <= '0';
 				s2 <= '1';
 				--s3 <= s3;
@@ -146,9 +107,18 @@ BEGIN
 				shift <= '0';
 				load <= '0';
 				load_mult <= '0';
-			WHEN E4 =>
-				s1 <= '0';
+			WHEN E3 =>
+				s1 <= '1';
 				s2 <= '0';
+				--s3 <= s3;
+				--s4 <= s4;
+				clear <= '0';
+				shift <= '0';
+				load <= '0';
+				load_mult <= '0';
+			WHEN E4 =>
+				s1 <= '1';
+				s2 <= '1';
 				--s3 <= s3;
 				--s4 <= s4;
 				clear <= '0';

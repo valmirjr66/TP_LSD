@@ -135,7 +135,7 @@ BEGIN
 	REGISTRADOR_PRINCIPAL : registrador_16_bits PORT MAP(
 		D_IN => main_mux_signal,
 		Q_OUT => main_output_signal,
-		clk => clock,
+		clk => load,
 		R => reset);
 
 	PROCESS (main_output_signal)

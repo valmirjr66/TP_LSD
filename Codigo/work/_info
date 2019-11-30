@@ -1,0 +1,497 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Valmir Júnior\Documents\TP_LSD\Codigo
+Ebloco_controle
+Z1 w1575069116
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dC:\Users\Valmir Júnior\Documents\TP_LSD\Codigo
+Z5 8bloco_controle/bloco_controle.vhd
+Z6 Fbloco_controle/bloco_controle.vhd
+l0
+L4
+VmD7i94XZ_7P6=ZiYNdj]91
+Z7 OV;C;10.1b;51
+31
+Z8 !s108 1575071929.682000
+Z9 !s90 -reportprogress|300|-explicit|-93|bloco_controle/bloco_controle.vhd|
+Z10 !s107 bloco_controle/bloco_controle.vhd|
+Z11 o-explicit -93 -O0
+Z12 tExplicit 1
+!s100 Ton`>Dg8RMKnW4=bjlo_]3
+!i10b 1
+Aarch
+R2
+R3
+DEx4 work 14 bloco_controle 0 22 mD7i94XZ_7P6=ZiYNdj]91
+l18
+L14
+VNM=;o?CP13]Jl?1b[GzB<2
+R7
+31
+R8
+R9
+R10
+R11
+R12
+!s100 :XilcTEz=f^O;@cHhFSfS3
+!i10b 1
+Ebloco_operacional
+Z13 w1575068717
+R2
+R3
+R4
+Z14 8bloco_operacional/bloco_operacional.vhd
+Z15 Fbloco_operacional/bloco_operacional.vhd
+l0
+L4
+VQ[M;@6oN@m05li2SlYOKV1
+R7
+31
+Z16 !s108 1575071925.117000
+Z17 !s90 -reportprogress|300|-explicit|-93|bloco_operacional/bloco_operacional.vhd|
+Z18 !s107 bloco_operacional/bloco_operacional.vhd|
+R11
+R12
+!s100 ICH<:Cb`ojL3OSN=dC;K]2
+!i10b 1
+Artl
+R2
+R3
+DEx4 work 17 bloco_operacional 0 22 Q[M;@6oN@m05li2SlYOKV1
+l93
+L21
+V9DLFBLVRn>:AohhUfFoKP1
+R7
+31
+R16
+R17
+R18
+R11
+R12
+!s100 O0c99i<H7hehnahZPHV1f1
+!i10b 1
+Eci_combinacional
+Z19 w1574987810
+R2
+R3
+R4
+Z20 8bloco_operacional/ci_combinacional/ci_combinacional.vhd
+Z21 Fbloco_operacional/ci_combinacional/ci_combinacional.vhd
+l0
+L4
+V5==C<I7EBFRh=bh^fjbXA3
+R7
+31
+Z22 !s108 1575071927.995000
+Z23 !s90 -reportprogress|300|-explicit|-93|bloco_operacional/ci_combinacional/ci_combinacional.vhd|
+Z24 !s107 bloco_operacional/ci_combinacional/ci_combinacional.vhd|
+R11
+R12
+!s100 H0j[66]0?NOaMC2X;ED9g0
+!i10b 1
+Artl
+R2
+R3
+DEx4 work 16 ci_combinacional 0 22 5==C<I7EBFRh=bh^fjbXA3
+l37
+L19
+VS5<6H4l11aFE_A7ojc^H20
+R7
+31
+R22
+R23
+R24
+R11
+R12
+!s100 MHia8hzQ[L^X^[NkzoGmS2
+!i10b 1
+Eci_sequencial
+Z25 w1574984979
+R2
+R3
+R4
+Z26 8bloco_operacional/ci_sequencial/ci_sequencial.vhd
+Z27 Fbloco_operacional/ci_sequencial/ci_sequencial.vhd
+l0
+L4
+V=ZW0hO;YSYL8MiM28IioL2
+R7
+31
+Z28 !s108 1575071927.281000
+Z29 !s90 -reportprogress|300|-explicit|-93|bloco_operacional/ci_sequencial/ci_sequencial.vhd|
+Z30 !s107 bloco_operacional/ci_sequencial/ci_sequencial.vhd|
+R11
+R12
+!s100 ]Paj:h9^MLlgn<dkj5]7_0
+!i10b 1
+Artl
+R2
+R3
+DEx4 work 13 ci_sequencial 0 22 =ZW0hO;YSYL8MiM28IioL2
+l34
+L23
+V175eSigR=Eo@Vi=l>1<7b0
+R7
+31
+R28
+R29
+R30
+R11
+R12
+!s100 b<g00_?b4Rb`EQo3M[zAS2
+!i10b 1
+Eflip_flop_d
+Z31 w1574725410
+R2
+R3
+R4
+Z32 8bloco_operacional/shared/registrador_16_bits/flip_flop_d.vhd
+Z33 Fbloco_operacional/shared/registrador_16_bits/flip_flop_d.vhd
+l0
+L4
+V<GUIU?RILRHG]:V_P5_b33
+R7
+31
+Z34 !s108 1575071926.785000
+Z35 !s90 -reportprogress|300|-explicit|-93|bloco_operacional/shared/registrador_16_bits/flip_flop_d.vhd|
+Z36 !s107 bloco_operacional/shared/registrador_16_bits/flip_flop_d.vhd|
+R11
+R12
+!s100 n;bW4VF`a<jB7]Cm9iZ0d1
+!i10b 1
+Artl
+R2
+R3
+DEx4 work 11 flip_flop_d 0 22 <GUIU?RILRHG]:V_P5_b33
+l18
+L13
+VZke4VFmo>heCH1^1m9_530
+R7
+31
+R34
+R35
+R36
+R11
+R12
+!s100 2f5ZS<>eJJUk2W;J`ZDV:2
+!i10b 1
+Efull_adder
+Z37 w1574725409
+R2
+R3
+R4
+Z38 8bloco_operacional/ci_combinacional/ppa/full_adder/full_adder.vhd
+Z39 Fbloco_operacional/ci_combinacional/ppa/full_adder/full_adder.vhd
+l0
+L4
+V<A96gWnnTg?E=H>d`hMmc0
+R7
+31
+Z40 !s108 1575071928.860000
+Z41 !s90 -reportprogress|300|-explicit|-93|bloco_operacional/ci_combinacional/ppa/full_adder/full_adder.vhd|
+Z42 !s107 bloco_operacional/ci_combinacional/ppa/full_adder/full_adder.vhd|
+R11
+R12
+!s100 K_ZRIeRj9eMB=CMZLl9c52
+!i10b 1
+Artl
+R2
+R3
+DEx4 work 10 full_adder 0 22 <A96gWnnTg?E=H>d`hMmc0
+l15
+L14
+Vk?J9OZo?nU7>j0z81T?8;1
+R7
+31
+R40
+R41
+R42
+R11
+R12
+!s100 dNS7WGh?GAmk[`zGd^4N]2
+!i10b 1
+Emultiplier
+Z43 w1575064731
+Z44 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+R2
+R3
+R4
+Z45 8bloco_operacional/ci_combinacional/multiplier/multiplier.vhd
+Z46 Fbloco_operacional/ci_combinacional/multiplier/multiplier.vhd
+l0
+L5
+VnIlimViPT>eQFmD`N3EYf2
+R7
+31
+Z47 !s108 1575071929.214000
+Z48 !s90 -reportprogress|300|-explicit|-93|bloco_operacional/ci_combinacional/multiplier/multiplier.vhd|
+Z49 !s107 bloco_operacional/ci_combinacional/multiplier/multiplier.vhd|
+R11
+R12
+!s100 Mz5fFfn16EGAA4=D[6XZ:0
+!i10b 1
+Artl
+R44
+R2
+R3
+DEx4 work 10 multiplier 0 22 nIlimViPT>eQFmD`N3EYf2
+l20
+L18
+VhDfmGAB>;fKX^=o@C2iAL0
+R7
+31
+R47
+R48
+R49
+R11
+R12
+!s100 JTI=1NT5oT@YVQSeD1ZVb2
+!i10b 1
+Emux_16_bits_1x2
+Z50 w1574997671
+R2
+R3
+R4
+Z51 8bloco_operacional/mux_16_bits_1X2.vhd
+Z52 Fbloco_operacional/mux_16_bits_1X2.vhd
+l0
+L4
+VYeQIz_fggj3hXTQIeQzEo0
+R7
+31
+Z53 !s108 1575071925.531000
+Z54 !s90 -reportprogress|300|-explicit|-93|bloco_operacional/mux_16_bits_1X2.vhd|
+Z55 !s107 bloco_operacional/mux_16_bits_1X2.vhd|
+R11
+R12
+!s100 PlFEBHT3m3nkoGf@Lk`kl0
+!i10b 1
+Artl
+R2
+R3
+DEx4 work 15 mux_16_bits_1x2 0 22 YeQIz_fggj3hXTQIeQzEo0
+l18
+L17
+VgE5K4ZalbFN4zMDZ8m30W3
+R7
+31
+R53
+R54
+R55
+R11
+R12
+!s100 =QnE@Z9V1Y5JSOWl<E20A0
+!i10b 1
+Emux_16_bits_2x4
+Z56 w1575064036
+R2
+R3
+R4
+Z57 8bloco_operacional/mux_16_bits_2X4.vhd
+Z58 Fbloco_operacional/mux_16_bits_2X4.vhd
+l0
+L4
+V^]IaLQCz3JYWjENfTcm^[3
+R7
+31
+Z59 !s108 1575071925.983000
+Z60 !s90 -reportprogress|300|-explicit|-93|bloco_operacional/mux_16_bits_2X4.vhd|
+Z61 !s107 bloco_operacional/mux_16_bits_2X4.vhd|
+R11
+R12
+!s100 J=B26i=41d3j9haSc:mVU1
+!i10b 1
+Artl
+R2
+R3
+DEx4 work 15 mux_16_bits_2x4 0 22 ^]IaLQCz3JYWjENfTcm^[3
+l21
+L20
+V;b@_kladX2YWE]<42M:;`0
+R7
+31
+R59
+R60
+R61
+R11
+R12
+!s100 _G1bLz^YhMm_5b[OT8RU62
+!i10b 1
+Eppa
+Z62 w1574995462
+R2
+R3
+R4
+Z63 8bloco_operacional/ci_combinacional/ppa/ppa.vhd
+Z64 Fbloco_operacional/ci_combinacional/ppa/ppa.vhd
+l0
+L4
+V6gWGP7IA=YeMJFJm?X1WQ3
+R7
+31
+Z65 !s108 1575071928.269000
+Z66 !s90 -reportprogress|300|-explicit|-93|bloco_operacional/ci_combinacional/ppa/ppa.vhd|
+Z67 !s107 bloco_operacional/ci_combinacional/ppa/ppa.vhd|
+R11
+R12
+!s100 Q9cT2hKZYTOTAI<nDQB;X3
+!i10b 1
+Artl
+R2
+R3
+DEx4 work 3 ppa 0 22 6gWGP7IA=YeMJFJm?X1WQ3
+l31
+L18
+Vh7k8FNU]V3``0f[LCjIH73
+R7
+31
+R65
+R66
+R67
+R11
+R12
+!s100 Dfk:OlU58n_oCE8c>bYX62
+!i10b 1
+Eregistrador_16_bits
+R31
+R2
+R3
+R4
+Z68 8bloco_operacional/shared/registrador_16_bits/registrador_16_bits.vhd
+Z69 Fbloco_operacional/shared/registrador_16_bits/registrador_16_bits.vhd
+l0
+L4
+V@?SMH5=S^Y22MWPU7bSK32
+R7
+31
+Z70 !s108 1575071926.405000
+Z71 !s90 -reportprogress|300|-explicit|-93|bloco_operacional/shared/registrador_16_bits/registrador_16_bits.vhd|
+Z72 !s107 bloco_operacional/shared/registrador_16_bits/registrador_16_bits.vhd|
+R11
+R12
+!s100 O01>5[I67aZWFzk1dhgLR1
+!i10b 1
+Artl
+R2
+R3
+DEx4 work 19 registrador_16_bits 0 22 @?SMH5=S^Y22MWPU7bSK32
+l26
+L17
+VcYik14TdMa:VWHm>FCj9A1
+R7
+31
+R70
+R71
+R72
+R11
+R12
+!s100 C_@9e1XLbU6D=:ZkLm9J_2
+!i10b 1
+Eshifter
+Z73 w1574984329
+R2
+R3
+R4
+Z74 8bloco_operacional/ci_sequencial/shifter/shifter.vhd
+Z75 Fbloco_operacional/ci_sequencial/shifter/shifter.vhd
+l0
+L4
+V=ZHO@M=UGX>WWiECbXj4z2
+R7
+31
+Z76 !s108 1575071927.652000
+Z77 !s90 -reportprogress|300|-explicit|-93|bloco_operacional/ci_sequencial/shifter/shifter.vhd|
+Z78 !s107 bloco_operacional/ci_sequencial/shifter/shifter.vhd|
+R11
+R12
+!s100 `_jX;]K?hBMoG9YKo;<im1
+!i10b 1
+Artl
+R2
+R3
+DEx4 work 7 shifter 0 22 =ZHO@M=UGX>WWiECbXj4z2
+l30
+L19
+VE<djKO>2NPzQg_L3_bFTB3
+R7
+31
+R76
+R77
+R78
+R11
+R12
+!s100 =iBKOdlggDgPYZAZ3RV2U0
+!i10b 1
+Esistema
+Z79 w1575066490
+R2
+R3
+R4
+Z80 8sistema.vhd
+Z81 Fsistema.vhd
+l0
+L4
+V2TeVf;Lk5VmkL8ZV92hlc0
+R7
+31
+Z82 !s108 1575071924.762000
+Z83 !s90 -reportprogress|300|-explicit|-93|sistema.vhd|
+Z84 !s107 sistema.vhd|
+R11
+R12
+!s100 OLUPJ5KMLFW:OTcGjQA3I1
+!i10b 1
+Artl
+R2
+R3
+DEx4 work 7 sistema 0 22 2TeVf;Lk5VmkL8ZV92hlc0
+l44
+L18
+V[RlczYoNjz88P[n65zoge2
+R7
+31
+R82
+R83
+R84
+R11
+R12
+!s100 IUE>ih687TJ_^JJ4RF^Yk2
+!i10b 1
+Etb_sistema
+Z85 w1575071922
+R2
+R3
+R4
+Z86 8tb_sistema.vhd
+Z87 Ftb_sistema.vhd
+l0
+L4
+VG2[ZFmEc2b0zC:IVSQKgE3
+!s100 63NhC`difOnSRZVSPH4M;1
+R7
+31
+!i10b 1
+Z88 !s108 1575071930.281000
+Z89 !s90 -reportprogress|300|-explicit|-93|tb_sistema.vhd|
+Z90 !s107 tb_sistema.vhd|
+R11
+R12
+Ateste
+R2
+R3
+DEx4 work 10 tb_sistema 0 22 G2[ZFmEc2b0zC:IVSQKgE3
+l24
+L10
+VXWdJCge=TH`hBi54_zZnc2
+!s100 1S48QToZiX?@UeK?_CLf@3
+R7
+31
+!i10b 1
+R88
+R89
+R90
+R11
+R12

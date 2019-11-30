@@ -1,60 +1,52 @@
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 
-ENTITY tb_bloco_operacional IS
+ENTITY tb_sistema IS
 	GENERIC (
 		DEFAULT_SIZE : INTEGER := 16
 	);
-END tb_bloco_operacional;
+END tb_sistema;
 
-ARCHITECTURE teste OF tb_bloco_operacional IS
-	COMPONENT bloco_operacional IS
+ARCHITECTURE teste OF tb_sistema IS
+	COMPONENT sistema IS
 		PORT (
-			-- Pinos principais
 			A : IN std_logic_vector(DEFAULT_SIZE - 1 DOWNTO 0);
 			B : IN std_logic_vector(DEFAULT_SIZE - 1 DOWNTO 0);
 			Y : OUT std_logic_vector(DEFAULT_SIZE - 1 DOWNTO 0);
-			-- Pinos de controle
-			s1, s2, s3, s4 : IN std_logic;
-			clock, reset : IN std_logic;
-			load, clear, shift, load_mult : IN std_logic
+			R, S, M, Da, Db, La, Lb : IN std_logic;
+			clock, reset : IN std_logic
 		);
 	END COMPONENT;
 
 	SIGNAL A, B, Y : std_logic_vector(DEFAULT_SIZE - 1 DOWNTO 0);
-	SIGNAL s1, s2, s3, s4 : std_logic := '0';
+	SIGNAL R, S, M, Da, Db, La, Lb : std_logic := '0';
 	SIGNAL clock, reset : std_logic := '0';
-	SIGNAL load, clear, shift, load_mult : std_logic := '0';
 BEGIN
-	instancia_bloco_operacional : bloco_operacional
+	instancia_sistema : sistema
 	PORT MAP(
 		A => A,
 		B => B,
 		Y => Y,
-		s1 => s1,
-		s2 => s2,
-		s3 => s3,
-		s4 => s4,
 		clock => clock,
 		reset => reset,
-		load => load,
-		clear => clear,
-		shift => shift,
-		load_mult => load_mult
+		R => R,
+		S => S,
+		M => M,
+		Da => Da,
+		Db => Db,
+		La => La,
+		Lb => Lb
 	);
 
 	entradas_process : PROCESS
 	BEGIN
 		A <= "0000100110010110";
 		B <= "0010100011010001";
-		--s1 <= '1';
-		--s2 <= '1';
 		WAIT FOR 20 ns;
-		load_mult <= '1';
+		m <= '1';
 		WAIT FOR 20 ns;
-		shift <= '1';
-		WAIT FOR 20 ns;
-		load <= '1';
+		r <= '1';
+		WAIT FOR 100 ns;
 	END PROCESS;
 
 	clock_process : PROCESS
